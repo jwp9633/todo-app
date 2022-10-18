@@ -1,0 +1,19 @@
+{
+  "todos": [
+    {
+      "id": 0,
+      "description": "밥 먹기",
+      "isChecked": true
+    },
+    {
+      "id": 1,
+      "description": "운동하기",
+      "isChecked": false
+    },
+    {
+      "id": 2,
+      "description": "공부하기",
+      "isChecked": true
+    }
+  ]
+}
