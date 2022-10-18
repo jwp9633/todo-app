@@ -1,24 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import styled, { createGlobalStyle } from 'styled-components';
+import Header from './components/Header';
+import Nav from './components/Nav';
+import Todos from './components/Todos';
+import Footer from './components/Footer';
+
+const GlobalStyle = createGlobalStyle`
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+  }
+`;
+
+const Wrapper = styled.div`
+  height: 100vh;
+  border: 1px gray solid;
+
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  grid-template-rows: 40px 1fr 40px;
+  grid-template-areas:
+    'header header'
+    'nav main'
+    'footer footer';
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <GlobalStyle />
+      <Wrapper>
+        <Header />
+        <Nav />
+        <Todos />
+        <Footer />
+      </Wrapper>
+    </>
   );
 }
 
